@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    //Changed this to FixedUpdate because it is better for physics objects
+    void FixedUpdate()
     {
         //So issue, this is called every frame, but if someone has a higher frame right, that person's box will move faster!
         //playerRb.AddForce(0, 0, 200);
