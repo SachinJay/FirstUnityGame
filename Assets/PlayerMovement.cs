@@ -47,12 +47,12 @@ public class PlayerMovement : MonoBehaviour
 
         if(isRight)
         {
-            playerRb.AddForce(sideForce * Time.deltaTime, 0, 0);
+            playerRb.AddForce(sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         if(isLeft)
         {
-            playerRb.AddForce(-sideForce * Time.deltaTime, 0, 0);
+            playerRb.AddForce(-sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
