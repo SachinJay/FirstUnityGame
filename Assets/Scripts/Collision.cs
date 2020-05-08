@@ -16,6 +16,7 @@ public class Collision : MonoBehaviour
             //When you collide with an obstacle, stop the player from moving
             mvmt.enabled = false;
 
+            FindObjectOfType<GameManager>().GameOver();
             //IDEA: I saw an add explosion force, so I think maybe we should explode the player on contact that'd be neat
         }
     }

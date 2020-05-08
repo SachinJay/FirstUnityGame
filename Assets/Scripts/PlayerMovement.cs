@@ -54,5 +54,10 @@ public class PlayerMovement : MonoBehaviour
         {
             playerRb.AddForce(-sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
+
+        if(playerRb.position.y < -1f)
+        {
+            FindObjectOfType<GameManager>().GameOver();
+        }
     }
 }
