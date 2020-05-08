@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody playerRb;
 
     public float playerForce = 2000f;
+    public float sideForce = 500f;
 
     // Start is called before the first frame update
     void Start()
@@ -33,5 +34,17 @@ public class PlayerMovement : MonoBehaviour
 
         //So we add this thingy, which is basically how much time passes in between each frame, so it is smaller for higher frame rates and balances everything out
         playerRb.AddForce(0,0, playerForce * Time.deltaTime);
+
+        //Adding the cases for wasd inputs 
+
+        if(Input.GetKey("d"))
+        {
+            playerRb.AddForce(sideForce * Time.deltaTime, 0, 0);
+        }
+
+        if(Input.GetKey("a"))
+        {
+            playerRb.AddForce(-sideForce * Time.deltaTime, 0, 0);
+        }
     }
 }
