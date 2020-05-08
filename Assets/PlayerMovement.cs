@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     //Then, in unity, can drag the particular component you want to access into the corresopnding field
     public Rigidbody playerRb;
 
+    public float playerForce = 2000f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,6 @@ public class PlayerMovement : MonoBehaviour
         //playerRb.AddForce(0, 0, 200);
 
         //So we add this thingy, which is basically how much time passes in between each frame, so it is smaller for higher frame rates and balances everything out
-        playerRb.AddForce(0,0,2000*Time.deltaTime);
+        playerRb.AddForce(0,0, playerForce * Time.deltaTime);
     }
 }
