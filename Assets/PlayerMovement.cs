@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float playerForce = 2000f;
     public float sideForce = 500f;
+    private bool isRight = false;
+    private bool isLeft = false; 
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,12 @@ public class PlayerMovement : MonoBehaviour
         //playerRb.AddForce(0,200,500);
     }
 
+    private void Update()
+    {
+        isRight = Input.GetKey("d");
+        isLeft = Input.GetKey("a");
+    }
+
     // Update is called once per frame
     //Changed this to FixedUpdate because it is better for physics objects
     void FixedUpdate()
@@ -37,12 +45,12 @@ public class PlayerMovement : MonoBehaviour
 
         //Adding the cases for wasd inputs 
 
-        if(Input.GetKey("d"))
+        if(isRight)
         {
             playerRb.AddForce(sideForce * Time.deltaTime, 0, 0);
         }
 
-        if(Input.GetKey("a"))
+        if(isLeft)
         {
             playerRb.AddForce(-sideForce * Time.deltaTime, 0, 0);
         }
