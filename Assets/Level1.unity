@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restartGameDelay: 2
-  winUIElem: {fileID: 0}
+  winUIElem: {fileID: 1621295793}
 --- !u!1001 &164567755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2292,6 +2292,7 @@ GameObject:
   - component: {fileID: 1621295794}
   - component: {fileID: 1621295796}
   - component: {fileID: 1621295795}
+  - component: {fileID: 1621295797}
   m_Layer: 5
   m_Name: Win
   m_TagString: Untagged
@@ -2357,6 +2358,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621295793}
   m_CullTransparentMesh: 0
+--- !u!95 &1621295797
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621295793}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c231e2f8abe0f9a4aa6f1fdc1f7ed3d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1813386239
 PrefabInstance:
   m_ObjectHideFlags: 0
