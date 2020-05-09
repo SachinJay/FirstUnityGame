@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     bool gameIsOver = false;
     public float restartGameDelay = 2f;
+    public GameObject winUIElem;
+
+
    public void GameOver()
     {
         if(!gameIsOver)
@@ -21,5 +24,10 @@ public class GameManager : MonoBehaviour
     {
         string nameOfScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(nameOfScene);
+    }
+
+    public void Win()
+    {
+        winUIElem.SetActive(true);
     }
 }
