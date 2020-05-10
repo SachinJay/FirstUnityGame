@@ -11,8 +11,10 @@ public class PlayerMovement : MonoBehaviour
 
     public float playerForce = 2000f;
     public float sideForce = 500f;
+    public float upVelocity = 500f;
     private bool isRight = false;
-    private bool isLeft = false; 
+    private bool isLeft = false;
+    private bool isUp = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isRight = Input.GetKey("d");
         isLeft = Input.GetKey("a");
+        isUp = Input.GetKey("w");
     }
 
     // Update is called once per frame
@@ -53,6 +56,11 @@ public class PlayerMovement : MonoBehaviour
         if(isLeft)
         {
             playerRb.AddForce(-sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+        }
+
+        if(isUp)
+        {
+            playerRb.velocity = new Vector3(0,upVelocity,0);
         }
 
         if(playerRb.position.y < -1f)
