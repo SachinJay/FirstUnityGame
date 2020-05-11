@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isRight = Input.GetKey("d");
         isLeft = Input.GetKey("a");
-        if(Input.GetKeyDown("w"))
+        if(Input.GetKeyDown("w") && playerRb.position.y < 1.1f )
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
