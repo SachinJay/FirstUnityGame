@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isRight = Input.GetKey("d");
         isLeft = Input.GetKey("a");
-        if(Input.GetKeyDown("w") && playerRb.position.y < 1.1f )
+        if(Input.GetKeyDown("w") && playerRb.position.y < 1.1f  && playerRb.position.y > 0)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             audSrc.Play();
