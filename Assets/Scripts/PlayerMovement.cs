@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isRight = false;
     private bool isLeft = false;
     public float jumpForce;
+    public AudioSource audSrc;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown("w") && playerRb.position.y < 1.1f )
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            audSrc.Play();
         }
     }
 
