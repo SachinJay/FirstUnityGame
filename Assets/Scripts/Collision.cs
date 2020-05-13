@@ -18,7 +18,7 @@ public class Collision : MonoBehaviour
             mvmt.enabled = false;
 
 
-            Collider.FindObjectOfType<AudioSource>().Play();
+            collision.gameObject.GetComponent<AudioSource>().Play();
 
             FindObjectOfType<GameManager>().GameOver();
             //IDEA: I saw an add explosion force, so I think maybe we should explode the player on contact that'd be neat
