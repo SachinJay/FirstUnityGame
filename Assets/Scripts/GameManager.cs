@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
+        //Plays the animation for the level complete thing
         winUIElem.SetActive(true);
     }
 }
