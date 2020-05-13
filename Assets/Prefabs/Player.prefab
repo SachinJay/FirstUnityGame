@@ -93,7 +93,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840639602282572972}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 90e0eba4cf3d3a442bd40f4d40967285, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -264,3 +264,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mvmt: {fileID: 840639602282572978}
   JumpBuildId: 2
+  MoveBuildId: 1
+  instructUIObj: {fileID: 0}
