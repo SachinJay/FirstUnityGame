@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isRight = false;
     private bool isLeft = false;
     public float jumpForce;
+    public int jumpUnlockBuildId;
+    private bool jumpUnlocked = false;
     public AudioSource audSrc;
 
     // Start is called before the first frame update
@@ -33,9 +36,12 @@ public class PlayerMovement : MonoBehaviour
     {
         isRight = Input.GetKey("d");
         isLeft = Input.GetKey("a");
-        if(Input.GetKeyDown("w") && playerRb.position.y < 1.1f  && playerRb.position.y > 0)
+        jumpUnlocked = SceneManager.GetActiveScene().buildIndex >= jumpUnlockBuildId;
+
+        if(Input.GetKeyDown("w") && playerRb.position.y < 1.1f  && playerRb.position.y > 0 && jumpUnlocked)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            print("boing");
             audSrc.Play();
         }
     }
