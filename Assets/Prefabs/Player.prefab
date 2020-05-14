@@ -130,7 +130,7 @@ MonoBehaviour:
   playerRb: {fileID: 840639602282572977}
   playerForce: 2000
   sideForce: 50
-  jumpForce: 6
+  jumpForce: 7
   jumpUnlockBuildId: 2
   audSrc: {fileID: 7416813873345739237}
 --- !u!114 &840639602282572979
