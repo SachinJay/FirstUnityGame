@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKeyDown("w") && playerRb.position.y < 1.1f  && playerRb.position.y > 0 && jumpUnlocked)
         {
+            print(jumpUnlockBuildId);
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             print("boing");
             audSrc.Play();
